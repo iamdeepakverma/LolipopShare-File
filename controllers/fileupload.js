@@ -11,7 +11,8 @@ export const Fileupload =async (req, res) => {
     try{
         const file = await File.create(fileobj)
         console.log("File uploaded",file)
-        res.status(200).json({path:`http://localhost:5000/file/${file._id   }`})
+        // res.status(200).json({path:`http://localhost:5000/file/${file._id   }`})
+        res.status(200).json({path:`https://lolipopshare-file.onrender.com/${file._id   }`})
 
     }catch(error)   {
         console.log("Something went wrong",error.message)
